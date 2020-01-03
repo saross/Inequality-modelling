@@ -49,11 +49,11 @@ def simple_bettor(funds, initial_wager, wager_count):
 
     # make wager number the x variable
 
-    xW = []
+    xWager = []
 
     # make value (funds balance) the Y variable
 
-    yV = []
+    yValue = []
 
 
     currentWager = 1 # start at 1 and not 0 for first wager
@@ -62,14 +62,14 @@ def simple_bettor(funds, initial_wager, wager_count):
         if rollDice():
             value = value+wager
             # append current wager number and new value (funds balance) if bet is successful
-            wX.append(currentWager)
-            vY.append(value)
+            xWager.append(currentWager)
+            yValue.append(value)
 
         else:
             value = value-wager
             # append current wager number and new value (funds blance) if bet is unsuccessful
-            wX.append(currentWager)
-            vY.append(value)
+            xWager.append(currentWager)
+            yValue.append(value)
 
         currentWager = currentWager+1
 
@@ -83,7 +83,7 @@ def simple_bettor(funds, initial_wager, wager_count):
 
     # print('Funds:', value)
 
-    plt.plot(wX,vY)
+    plt.plot(xWager,yValue)
 
 # Now run lots of wagers
 
