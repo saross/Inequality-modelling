@@ -45,9 +45,9 @@ def simple_bettor(funds, initial_wager, wager_count):
     value = funds
     wager = initial_wager
 
-    currentWager = 0
+    currentWager = 1
 
-    while currentWager < wager_count:
+    while currentWager <= wager_count:
         if rollDice():
             value = value+wager
         else:
