@@ -47,11 +47,11 @@ def simple_bettor(funds, initial_wager, wager_count):
     value = funds
     wager = initial_wager
 
-    # make wager the x variable
+    # make wager number the x variable
 
     xW = []
 
-    # make value (funds) the Y variable
+    # make value (funds balance) the Y variable
 
     yV = []
 
