@@ -7,7 +7,7 @@
 import random
 import matplotlib
 import matplotlib.pyplot as plt
-import numpy
+import numpy as np
 
 # Create random annual gain / loss figure between -100 and +100 arbitrary units
 
