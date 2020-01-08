@@ -9,35 +9,39 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy
 
-# Create random annual gain / loss of 100 arbitrary units
+# Create random annual gain / loss figure between -100 and +100 arbitrary units
 
 def rollDice():
-    roll = random.randint(-100,100)
-    return roll
+	roll = random.randint(-100,100)
+	return roll
 
 # Create a simple model household
-
 def household(wealth, year_count):
 	value = wealth
-	year = year_count
 
-    # make year the x variable
+	xYear = [] # make year the x variable
+	yWealth = [] # make wealth the Y variable
 
-    xYear = []
+	currentYear = 0 # start at Year 0 (initial state)
 
-    # make wealth the Y variable
+	while currentYear <= year_count:
+		# append current year count and new wealth to table
+		xYear.append(currentYear)
+		yWealth.append(value)
 
-    yWealth = []
+		result = rollDice() # generate random gain or loss
+		value = value + result # adjust household wealth by the gain or loss for the year
 
+		currentYear += 1 # increment year by 1
 
-    currentYear = 1 # start at Year
+	plt.plot(xYear,yWealth)
 
-    while currentYear <= year:
-    	rollDice()
-    	value = value + roll
-    	# append current year count and new wealth to table
-    	xYear.append(year)
-    	yWealth.append(value)
+# Now generate multiple households
+i = 1
+while i <= 1000:
+	household(1000, 25)
+	i += 1
 
-        currentYear += 1 # increment year by 1
-
+plt.ylabel('Household wealth')
+plt.xlabel('Year')
+plt.show()

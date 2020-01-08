@@ -60,7 +60,7 @@ def simple_bettor(funds, initial_wager, wager_count):
 
     while currentWager <= wager_count:
         if rollDice():
-            value = value+wager
+            value = value + wager
             # append current wager count and new value (funds balance) if bet is successful
             xWager.append(currentWager)
             yValue.append(value)
@@ -71,7 +71,7 @@ def simple_bettor(funds, initial_wager, wager_count):
             xWager.append(currentWager)
             yValue.append(value)
 
-        currentWager = currentWager+1
+        currentWager = currentWager + 1
 
 # Exit out if funds ever fall to zero
 
