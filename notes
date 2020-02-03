@@ -1,0 +1,82 @@
+# Git
+Set up git according to the Software Carpentry 'Version Control with Git' --> 'Creating a repository' instructions (https://swcarpentry.github.io/git-novice/03-create/index.html).
+
+Make the desired directory where your git repository will live.
+
+From the command line in that directory, initiate git:
+
+`$ git init`
+
+If there is anything in the remote repository, you need to pull from there first, before creating anything in the local repository. Conversely, if there is anything in the local repository, you must create an *empty* remote repository (no license or readme file).
+
+Assume the desired files are on the remote repo:
+
+Add remote repository
+
+`$ git remote add origin remote repository URL`
+
+Get the remote repository URL from the green 'Clone or download' button.
+
+From the command line in the local repo directory:
+
+`$ git pull origin master`
+
+If, conversely, you have created files in the local git repository, and have made an *empty* remote repository, push files to the remote:
+
+`$ git push origin master`
+
+
+# Random numbers
+
+Created a 1-100 pseudo-random number generator using the tutorial at https://pythonprogramming.net/monte-carlo-simulator-python/.
+
+Everything works as expected. Note shorthand:
+
+`x+=1`
+
+is the same as:
+
+`x=x+1`
+
+# Create simple bettor
+
+Created simple bettor as per 
+https://pythonprogramming.net/monte-carlo-dice-function/?completed=/monte-carlo-simulator-python/ 
+
+Had to correct some errors in code. 
+
+`elif 100 > roll >= 51` not `elif 100 > roll >= 50`
+
+(On reflection this change didn't matter since a roll of 51 would have been caught by an earlier condition, but it still bothers me...).
+
+And had to add () to print commands.
+
+# Examine longer-term outcomes
+
+As per https://pythonprogramming.net/simple-bettor/?completed=/monte-carlo-dice-function/
+
+Performed as expected
+
+# Graph it
+
+https://pythonprogramming.net/plotting-monte-carlo-matplotlib/?completed=/simple-bettor/
+
+Installed python on my Surface. Started installing necessary packages. PIP asked to upgrade. After upgrade, PIP stopped working.
+
+`TypeError: 'Module' object is not callable`
+
+Solution: 
+
+https://stackoverflow.com/questions/58451650/pip-no-longer-working-after-update-error-module-object-is-not-callable
+
+Make a habit of using 
+
+`python -m pip` 
+
+Once libraries were installed, performed as expected.
+
+# Create actual simulation of inequality
+
+I think I've gotten far enough to attempt a 'real' simulation.
+
+
