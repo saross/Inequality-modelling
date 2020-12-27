@@ -1,4 +1,5 @@
 # Git
+
 Set up git according to the Software Carpentry 'Version Control with Git' --> 'Creating a repository' instructions (https://swcarpentry.github.io/git-novice/03-create/index.html).
 
 Make the desired directory where your git repository will live.
@@ -25,6 +26,13 @@ If, conversely, you have created files in the local git repository, and have mad
 
 `$ git push origin master`
 
+OR
+
+You can just clone the repository, which creates the local directory, initialises GIT, and sets up the remote origin
+
+'$ git clone <remote respoistory URL>'
+
+###########################################################################
 
 # Random numbers
 
